@@ -1,0 +1,16 @@
+- name: install https and ftp
+  apt: 
+    name: apache2 
+    state: present
+ 
+- name: create empty directory
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - /opt/test1
+    - /opt/test2
+    - /opt/test3
+  notify:
+    - stop apache2
+

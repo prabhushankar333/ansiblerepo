@@ -1,0 +1,10 @@
+- name: jenkins stop
+  command: service jenkins stop
+  tags:
+    - jenkins
+- name: jenkins start
+  service: 
+    name: jenkins
+    state: started
+  tags:
+    - jenkins start

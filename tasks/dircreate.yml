@@ -1,0 +1,15 @@
+- name: create test dir on ubuntu user
+  file:
+    path: "{{item}}"
+    state: directory
+    owner: ubuntu
+    group: root
+    recurse: true
+    mode: 0755
+  loop:
+    - "{{test.testdir1}}"
+    - "{{test.testdir2}}"
+    - "{{test.testdir3}}"
+  tags:
+    - dircreate
+

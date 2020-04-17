@@ -1,0 +1,4 @@
+---
+- import_tasks: test.yml
+- import_tasks: jenkinsstop.yml
+- import_tasks: dircreate.yml

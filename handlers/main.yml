@@ -1,0 +1,11 @@
+---
+# handlers file for testrolei
+- name: stop apache2
+  command: service apache2 stop
+  tags:
+    - restart
+
+- name: restart apache2
+  service:
+    name: apache2
+    state: restarted 
